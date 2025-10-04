@@ -7,16 +7,17 @@ import Link from 'next/link';
 const LingoSignUpPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [userType, setUserType] = useState('');
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    country: '',
-    phoneNumber: '',
-    interests: [],
-    agreeToTerms: false
-  });
+ const [formData, setFormData] = useState<FormDataType>({
+  fullName: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+  country: '',
+  phoneNumber: '',
+  interests: [], // ✅ Now it's treated as string[]
+  agreeToTerms: false,
+});
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter();
@@ -33,7 +34,6 @@ type FormDataType = {
 };
 
 
-
   const handleInputChange =
     (field: keyof FormDataType) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -45,14 +45,14 @@ type FormDataType = {
     };
 
 
-const handleInterestToggle = (interest: string) => {
-  setFormData((prev: FormDataType) => ({
-    ...prev,
-    interests: prev.interests.includes(interest)
-      ? prev.interests.filter((i) => i !== interest)
-      : [...prev.interests, interest],
-  }));
-};
+  const handleInterestToggle = (interest: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      interests: prev.interests.includes(interest)
+        ? prev.interests.filter((i) => i !== interest)
+        : [...prev.interests, interest],
+    }));
+  };
 
 
   const countries = [
