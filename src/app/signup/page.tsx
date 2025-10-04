@@ -359,7 +359,7 @@ type FormDataType = {
               </div>
               <span className="text-2xl font-bold text-white">Lingo</span>
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-400 flex flex-col items-end justofy-center md:block">
               Already have an account?{' '}
               <Link href="/signin" className="text-blue-400 hover:text-blue-300 font-semibold">Sign In</Link>
             </div>
@@ -368,7 +368,7 @@ type FormDataType = {
       </div>
 
       {/* Main Content */}
-      <div className="relative container mx-auto px-6 py-12">
+      <div className="relative container mx-auto px-2 sm:px-6 py-12">
         <div className="max-w-2xl mx-auto">
           <div className="bg-gray-900/50 backdrop-blur-sm border border-blue-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
             {currentStep > 1 && <ProgressBar />}
@@ -382,7 +382,7 @@ type FormDataType = {
               {currentStep > 1 && (
                 <button
                   onClick={() => setCurrentStep(currentStep - 1)}
-                  className="flex-1 px-6 py-3 bg-gray-800 border border-blue-500/20 rounded-full font-semibold text-white hover:bg-gray-700 transition-all"
+                  className="flex-1 px-6 py-3 bg-gray-800 border border-blue-500/20 rounded-full font-semibold text-white hover:bg-gray-700 transition-all text-sm sm:text-base"
                 >
                   Back
                 </button>
@@ -399,9 +399,9 @@ type FormDataType = {
                 <button
                   disabled={!formData.agreeToTerms}
                   onClick={() => {setTimeout(()=> {router.push("/dashboard")}, 2000)}}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
                 >
-                  Create Account 🚀
+                  Create Account
                 </button>
               )}
             </div>
