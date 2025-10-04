@@ -223,13 +223,13 @@ const handleInterestToggle = (interest: string) => {
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute inset-y-0 right-0 pr-3 flex items-center"
             >
-              <svg className="w-5 h-5 text-gray-500 hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+             { <svg className="w-5 h-5 text-gray-500 hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                 {showConfirmPassword ? (
                   <path fillRule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clipRule="evenodd" />
                 ) : (
                   <path fillRule="evenodd" d="M10 12a2 2 0 100-4 2 2 0 000 4z M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
                 )}
-              </svg>
+              </svg>}
             </button>
           </div>
         </div>
@@ -273,7 +273,7 @@ const handleInterestToggle = (interest: string) => {
     <div className="space-y-6">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-2">Your Interests</h2>
-        <p className="text-gray-400">Select topics you're interested in learning</p>
+        <p className="text-gray-400">Select topics you&apos;re interested in learning</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -303,7 +303,7 @@ const handleInterestToggle = (interest: string) => {
             className="mt-1 w-4 h-4 text-blue-600 bg-gray-900 border-blue-500/30 rounded focus:ring-blue-500 focus:ring-2"
           />
           <label htmlFor="terms" className="text-sm text-gray-300">
-            I agree to Lingo's{' '}
+            I agree to Lingo&apos;s{' '}
             <a href="#" className="text-blue-400 hover:text-blue-300 underline">Terms of Service</a>
             {' '}and{' '}
             <a href="#" className="text-blue-400 hover:text-blue-300 underline">Privacy Policy</a>
