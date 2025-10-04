@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const LingoSignUpPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -360,7 +361,7 @@ const handleInterestToggle = (interest: string) => {
             </div>
             <div className="text-sm text-gray-400">
               Already have an account?{' '}
-              <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold">Sign In</a>
+              <Link href="/signin" className="text-blue-400 hover:text-blue-300 font-semibold">Sign In</Link>
             </div>
           </div>
         </div>
