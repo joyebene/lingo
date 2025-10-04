@@ -47,7 +47,7 @@ const LingoSignInPage = () => {
               </div>
               <span className="text-2xl font-bold text-white">Lingo</span>
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-gray-400 flex flex-col items-end justofy-center md:block">
               Don&apos;t have an account?{' '}
               <Link href="/signup" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">Sign Up</Link>
             </div>
